@@ -1,7 +1,7 @@
 ## API Endpoints
 
-|                          Route                          	|       Method       	|                                                                                                                 Description                                                                                                                 	|
-|:-------------------------------------------------------:	|:------------------:	|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
+| Route                                                   	|       Method       	| Description                                                                                                                                                                                                                                 	|
+|---------------------------------------------------------	|:------------------:	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | /client_api/accounts/                                   	|      GET, POST     	| POST: Add accounts record in the database with all the data sent in the request body. GET: Lists all the accounts in the database.                                                                                                          	|
 | /client_api/accounts/(str: account_id)                  	| GET, PATCH, DELETE 	| GET: Get the account with account_id sent in the URL. PATCH: Update the account with account_id sent in URL and data sent in the request body. DELETE: Delete the account from DB whose account_id matches with the account_id sent in URL. 	|
 | /client_api/users/                                      	|      GET, POST     	| POST: Add the user’s record in the database with all the data sent in the request body. GET: Lists all the users in the database.                                                                                                           	|
@@ -19,7 +19,6 @@
 | /client_api/user_emotion_map?from=?&to=?                	|         GET        	| GET: Lists all the user emotion map data whose date lies between the range in the database.                                                                                                                                                 	|
 | /client_api/valence_score/(str :user_id)?from=?&to=?    	|         GET        	| GET: Get the valence score data from DB whose user_id matches with the user_id sent in the URL & between dates(from,to).                                                                                                                    	|
 | /client_api/valence_score?from=?&to=?                   	|         GET        	| GET: Lists all the valence score data data whose date lies between the range in the database.                                                                                                                                               	|
-
 
 ### POST-- {baseURL}/expression : 
 
