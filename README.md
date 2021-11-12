@@ -31,9 +31,7 @@
 
 # API Documentation
 
-I have used Postman Collection for the proper documentation of APIs with examples.
-
-[Collection](https://documenter.getpostman.com/view/15546015/TzedhjiX)
+I have used [Postman Collection](https://documenter.getpostman.com/view/15546015/TzedhjiX) for the proper documentation of APIs with examples.
 
 
 # Usage
