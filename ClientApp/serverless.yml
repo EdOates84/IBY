@@ -1,0 +1,126 @@
+org: niteshmahawar
+app: clientapp
+service: client
+
+frameworkVersion: '2'
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-south-1
+  lambdaHashingVersion: '20201221'
+
+functions:
+  app-api:
+    handler: handler.handler
+    events:
+      
+      - http:
+          path: /client_api/accounts
+          method: post
+          cors: true
+      - http:
+          path: /client_api/accounts
+          method: get
+          cors: true
+      - http:
+          path: /client_api/accounts/{proxy+}
+          method: get
+          cors: true
+      - http:
+          path: /client_api/accounts/{proxy+}
+          method: patch
+          cors: true
+      - http:
+          path: /client_api/accounts/{proxy+}
+          method: delete
+          cors: true
+
+
+      - http:
+          path: /client_api/users
+          method: post
+          cors: true
+      - http:
+          path: /client_api/users
+          method: get
+          cors: true
+      - http:
+          path: /client_api/users/{proxy+}
+          method: get
+          cors: true
+      - http:
+          path: /client_api/users/{proxy+}
+          method: patch
+          cors: true
+      - http:
+          path: /client_api/users/{proxy+}
+          method: delete
+          cors: true
+
+
+      - http:
+          path: /client_api/app_usages/{proxy+}
+          method: post
+          cors: true
+      - http:
+          path: /client_api/app_usages
+          method: get
+          cors: true
+      - http:
+          path: /client_api/app_usages/{proxy+}
+          method: get
+          cors: true
+
+
+      - http:
+          path: /client_api/facial_emotions/{proxy+}
+          method: post
+          cors: true
+      - http:
+          path: /client_api/facial_emotions/{proxy+}
+          method: get
+          cors: true
+      - http:
+          path: /client_api/facial_emotions
+          method: get
+          cors: true
+
+
+      - http:
+          path: /client_api/valence_score/{proxy+}
+          method: get
+          cors: true
+      - http:
+          path: /client_api/valence_score
+          method: get
+          cors: true
+
+
+      - http:
+          path: /client_api/voice_acoustics/{proxy+}
+          method: post
+          cors: true
+      - http:
+          path: /client_api/voice_acoustics
+          method: get
+          cors: true
+      - http:
+          path: /client_api/voice_acoustics/{proxy+}
+          method: get
+          cors: true
+
+
+      - http:
+          path: /client_api/user_emotion_map/{proxy+}
+          method: post
+          cors: true
+      - http:
+          path: /client_api/user_emotion_map
+          method: get
+          cors: true
+      - http:
+          path: /client_api/user_emotion_map/{proxy+}
+          method: get
+          cors: true
